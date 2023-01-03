@@ -1,0 +1,6 @@
+D:\Users\Andre\RiderProjects\CourseWork\CourseWork\bin\Debug\CourseWork.exe
+D:\Users\Andre\RiderProjects\CourseWork\CourseWork\bin\Debug\CourseWork.pdb
+D:\Users\Andre\RiderProjects\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.AssemblyReference.cache
+D:\Users\Andre\RiderProjects\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CoreCompileInputs.cache
+D:\Users\Andre\RiderProjects\CourseWork\CourseWork\obj\Debug\CourseWork.exe
+D:\Users\Andre\RiderProjects\CourseWork\CourseWork\obj\Debug\CourseWork.pdb
