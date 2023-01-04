@@ -23,7 +23,7 @@ namespace CourseWork
         public void SetGamesCount(int Value) { GamesCount = Value < 0 ? 0 : Value;}
         public string GetUserName() { return UserName;}
         
-        static char[,] _grid = new char[10, 10];
+        char[,] _grid = new char[10, 10];
         public int HitCount = 0;
         public int MissCount = 0;
         int _x = 0;
@@ -91,43 +91,11 @@ namespace CourseWork
         {
             return _grid;
         }
-        public static void SetGrid(int q, int w)
+        
+        public void GetGridBoard()
         {
-            _grid[q, w] = 'S';
+            _grid = Patterns.GetPattern();
         }
-        private static int GetRandom(int range)
-        {
-            Random rnd = new Random(DateTime.Now.Millisecond);
-            int value = rnd.Next(range);
-            return value;
-        }
-        public void GetPattern()
-        {
-            int patternNumber = GetRandom(5) + 1;
-            switch (patternNumber)
-            {
-                case 1:
-                    Patterns.PatternOne();
-                    break;
-                case 2:
-                    Patterns.PatternTwo();
-                    break;
-                case 3:
-                    Patterns.PatternThree();
-                    break;
-                case 4:
-                    Patterns.PatternFour();
-                    break;
-                case 5:
-                    Patterns.PatternFive();
-                    break;
-                case 6:
-                    Patterns.PatternSix();
-                    break;
-                default:
-                    throw new ArgumentException($"Pattern number {patternNumber} does not exist.");
-            }
-
-        }
+      
     }
 }

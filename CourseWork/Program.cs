@@ -42,9 +42,9 @@ namespace CourseWork
             BattleshipBoard b = new BattleshipBoard();
             Player p = new Player(name, 0, 0 );
             
-            p.GetPattern();
+            p.GetGridBoard();
             
-            while (p.GetHitCount() < 17)
+            while (p.GetHitCount() < 21)
             {
                 b.DisplayBoard(p.GetGrid(), cheat);
                 p.AskCoordinates();
