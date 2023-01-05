@@ -70,8 +70,12 @@ namespace CourseWork
                     Console.Clear();
                     Console.WriteLine("Hit!\r\n");
                     HitCount += 1;
-                }
-                else
+                }else if(_grid[_x, _y].Equals('H'))
+                {
+                    _grid[_x, _y] = 'H';
+                    Console.Clear();
+                    Console.WriteLine("You have already shoot down this ship!\r\n");
+                }else
                 {
                     _grid[_x, _y] = 'M';
                     Console.Clear();
