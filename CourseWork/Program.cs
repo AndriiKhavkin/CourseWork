@@ -9,13 +9,7 @@ namespace CourseWork
     {
         public static void Main(string[] args)
         {
-            // ConsoleColor[] colors = (ConsoleColor[]) ConsoleColor.GetValues(typeof(ConsoleColor));
-            // ConsoleColor currentBackground = Console.BackgroundColor;
-            // ConsoleColor currentForeground = Console.ForegroundColor;
-             //Console.ForegroundColor = ConsoleColor.Cyan ;
 
-            
-            
             Console.Title = "BattleShip!";
             Console. WriteLine("Welcome to BattleShip!\n"); 
             Console.WriteLine("What is your name player 1?");

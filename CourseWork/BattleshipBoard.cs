@@ -87,14 +87,14 @@ namespace CourseWork
                 Console.Write((Row).ToString() + " |");
                 for (Column = 0; Column <= 9; Column++)
                 {
-                    if (!cheatOn1 && Board1[Column, Row] == 'S')
+                    if (!cheatOn1 && Board1[Row, Column] == 'S')
                     {
                         //Console.Write("  |");
                         WriteCell(' ');
                     }
                     else
                     {
-                        WriteCell(Board1[Column, Row]);
+                        WriteCell(Board1[Row, Column]);
                         //Console.Write(" " + Board1[Column, Row] + " |");
                     }
                     Console.Write("");
@@ -103,14 +103,14 @@ namespace CourseWork
                 Console.Write((Row).ToString() + " |");
                 for (Column = 0; Column <= 9; Column++)
                 {
-                    if (!cheatOn2 && Board2[Column, Row] == 'S')
+                    if (!cheatOn2 && Board2[Row, Column] == 'S')
                     {
                         //Console.Write("  |");
                         WriteCell(' ');
                     }
                     else
                     {
-                        WriteCell(Board2[Column, Row]);
+                        WriteCell(Board2[Row, Column]);
                         //Console.Write(" " + Board2[Column, Row] + " |");
                     }
                     
