@@ -99,8 +99,8 @@ namespace CourseWork
             {
                 Console.Write("Congratulations, you managed to win without a single miss!");
                 char slash = '\\' ;
-                Console.Write("\n         . \n         " + slash +  "*" + slash + "\n         " + slash +  "  " + slash +  "      _-*|\n        _" +  slash + "    " + slash +  "_-*   |\n _____-*__________-*_______");
-                
+                Console.Write("\n         . \n         " + slash +  "*" + slash + "\n         " + slash +  "  " + slash +  "      _-*|\n        _" +  slash + "    " + slash +  "_-*   |\n _____-*__________-*_______\n");
+                Console.Write("(Drowned cruiser moscow)");
             }
         }
         
