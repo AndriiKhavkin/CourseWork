@@ -21,13 +21,13 @@ namespace CourseWork
             bool cheat1 = false; 
             bool cheat2 = false;
             
-            BattleshipBoard b1 = new BattleshipBoard();
-            BattleshipBoard b2 = new BattleshipBoard();
-            Player p1 = new Player(name1, 0, 0 );
-            Bot p2 = new Bot(name2, 0, 0 );
-
             while (playAgain)
             {
+                BattleshipBoard b1 = new BattleshipBoard();
+                BattleshipBoard b2 = new BattleshipBoard();
+                Player p1 = new Player(name1, 0, 0 );
+                Bot p2 = new Bot(name2, 0, 0 );
+                
                 p1.SetHitCount(0);
                 p2.SetHitCount(0);
                 
@@ -45,7 +45,7 @@ namespace CourseWork
 
                 while (p1.GetHitCount() < 21 && p2.GetHitCount() < 21)
                 {
-                    b1.DisplayBoard(p1.GetGrid(), p2.GetGrid(), cheat1, cheat2, p1, p2);
+                    b1.DisplayBoard(p2.GetGrid(), p1.GetGrid(), cheat1, cheat2, p1, p2);
                     p1.AskCoordinates();
                     if (p1.GetHitCount() == 21)
                     {
@@ -54,7 +54,7 @@ namespace CourseWork
                         break;
                     }
 
-                    b2.DisplayBoard(p1.GetGrid(), p2.GetGrid(), cheat1, cheat2, p1, p2);
+                    b2.DisplayBoard(p2.GetGrid(), p1.GetGrid(), cheat1, cheat2, p1, p2);
                     p2.AskCoordinates();
                 }
 

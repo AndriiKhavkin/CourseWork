@@ -79,5 +79,14 @@ namespace CourseWork
             }
             
         }
+        public char[,] GetGrid()
+        {
+            return _grid;
+        }
+        
+        public void GetGridBoard()
+        {
+            _grid = Patterns.GetPattern();
+        }
     }
 }
