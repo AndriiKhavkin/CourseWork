@@ -92,6 +92,17 @@ namespace CourseWork
                 Console.WriteLine("Error: Please enter numbers between 0 and 9. (Inclusive)");
             }
         }
+
+        public void Achievment()
+        {
+            if (GetMissCount()==0)
+            {
+                Console.Write("Congratulations, you managed to win without a single miss!");
+                char slash = '\\' ;
+                Console.Write("\n         . \n         " + slash +  "*" + slash + "\n         " + slash +  "  " + slash +  "      _-*|\n        _" +  slash + "    " + slash +  "_-*   |\n _____-*__________-*_______");
+                
+            }
+        }
         
         public char[,] GetGrid()
         {

@@ -18,7 +18,7 @@ namespace CourseWork
         {
             Console.WriteLine("It is bot " +  GetUserName() + " turn");
             
-            while (_grid[_x,_y] == 'S' || _grid[_x,_y] == 'M' )
+            while (_grid[_x,_y] == 'H' || _grid[_x,_y] == 'M' )
             {
                 _x = Utils.GetRandom(9);
                 Thread.Sleep(10);
@@ -26,7 +26,7 @@ namespace CourseWork
             }
             
             Console.WriteLine("Bot chose [x,y]: [{0},{1}] " , _x, _y);
-            Thread.Sleep(5000); 
+            Thread.Sleep(3000); 
             // Console.WriteLine("Enter X");
             // string line = Console.ReadLine();
             // int value;

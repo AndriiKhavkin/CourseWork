@@ -9,20 +9,18 @@ namespace CourseWork
     {
         public static void Main(string[] args)
         {
-
             Console.Title = "BattleShip!";
             Console. WriteLine("Welcome to BattleShip!\n"); 
-            Console.WriteLine("What is your name player 1?");
-            string name1 = System.Console.ReadLine();
-            Console.WriteLine("What is your name player 2?");
-            string name2 = System.Console.ReadLine();
-
-            bool playAgain = true;
-            bool cheat1 = false; 
-            bool cheat2 = false;
+           bool playAgain = true;
             
             while (playAgain)
             {
+                Console.WriteLine("What is your name player 1?");
+                string name1 = System.Console.ReadLine();
+                Console.WriteLine("What is your name player 2?");
+                string name2 = System.Console.ReadLine();
+                
+                
                 BattleshipBoard b1 = new BattleshipBoard();
                 BattleshipBoard b2 = new BattleshipBoard();
                 Player p1 = new Player(name1, 0, 0 );
@@ -33,11 +31,11 @@ namespace CourseWork
                 
                 Console.Write("\nPlayer 1: " + p1.GetUserName() + " Do you want to see battleships? (Y/N): ");
                 string answer1 = Console.ReadLine();
-                cheat1 = Utils.YN(answer1);
+                bool cheat1 = Utils.YN(answer1);
 
                 Console.Write("\nPlayer 2: " + p2.GetUserName() + " Do you want to see battleships? (Y/N): ");
                 string answer2 = Console.ReadLine();
-                cheat2 = Utils.YN(answer2);
+                bool cheat2 = Utils.YN(answer2);
 
                 p1.GetGridBoard();
                 Thread.Sleep(15);
@@ -45,6 +43,7 @@ namespace CourseWork
 
                 while (p1.GetHitCount() < 21 && p2.GetHitCount() < 21)
                 {
+                    
                     b1.DisplayBoard(p2.GetGrid(), p1.GetGrid(), cheat1, cheat2, p1, p2);
                     p1.AskCoordinates();
                     if (p1.GetHitCount() == 21)
@@ -57,7 +56,10 @@ namespace CourseWork
                     b2.DisplayBoard(p2.GetGrid(), p1.GetGrid(), cheat1, cheat2, p1, p2);
                     p2.AskCoordinates();
                 }
-
+                
+                p1.Achievment();
+                p2.Achievment();
+                
                 if (p2.GetHitCount() == 21)
                 {
                     Console.Write("Congratulations, " + p2.GetUserName() + "! You Win!\r\n");
