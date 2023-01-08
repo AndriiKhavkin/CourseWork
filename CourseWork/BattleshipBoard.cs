@@ -74,7 +74,7 @@ namespace CourseWork
         //
         //     return yn;
         // }
-        public void DisplayBoard(char[,] Board1, char[,] Board2, bool cheatOn1, bool cheatOn2, Player p1, Player p2)
+        public void DisplayBoard(char[,] Board1, char[,] Board2, bool cheatOn1, bool cheatOn2, Player p1, Bot p2)
         {
             int Row;
             int Column;
