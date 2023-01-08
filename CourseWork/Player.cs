@@ -38,7 +38,7 @@ namespace CourseWork
         {
             
         }
-        public void AskCoordinates()
+        public virtual void AskCoordinates()
         {
             Console.WriteLine("It is player " +  GetUserName() + " turn");
             Console.WriteLine("Enter X");

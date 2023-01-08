@@ -7,7 +7,6 @@ namespace CourseWork
 {
     public class BattleshipBoard
     {
-        
         private void WriteCell(char symbol)
         {
             if (symbol == ' ')
@@ -45,36 +44,36 @@ namespace CourseWork
                 Console.Write("|");
             }
         }
-       public static bool YN(string answer)
-        {
-            bool confirmed = false;
-            bool yn = false;
-            while (!confirmed)
-            {
-               
-                if (answer == "Y")
-                {
-                    confirmed = true;
-                    yn = true;
-                    Console.WriteLine("Player chose Yes!\n");
-                }
-                else if (answer == "N")
-                {
-
-                    Console.Write("Player chose No!\n");
-                    confirmed = true;
-                    break;
-                }
-                else
-                {
-                    Console.Write("Please press enter Y/N... \n");
-                    Console.Write("Please enter a selection: "); 
-                    answer = Console.ReadLine();
-                }
-            }
-
-            return yn;
-        }
+        // public static bool YN(string answer)
+        // {
+        //     bool confirmed = false;
+        //     bool yn = false;
+        //     while (!confirmed)
+        //     {
+        //        
+        //         if (answer == "Y")
+        //         {
+        //             confirmed = true;
+        //             yn = true;
+        //             Console.WriteLine("Player chose Yes!\n");
+        //         }
+        //         else if (answer == "N")
+        //         {
+        //
+        //             Console.Write("Player chose No!\n");
+        //             confirmed = true;
+        //             break;
+        //         }
+        //         else
+        //         {
+        //             Console.Write("Please press enter Y/N... \n");
+        //             Console.Write("Please enter a selection: "); 
+        //             answer = Console.ReadLine();
+        //         }
+        //     }
+        //
+        //     return yn;
+        // }
         public void DisplayBoard(char[,] Board1, char[,] Board2, bool cheatOn1, bool cheatOn2, Player p1, Player p2)
         {
             int Row;
@@ -87,14 +86,14 @@ namespace CourseWork
                 Console.Write((Row).ToString() + " |");
                 for (Column = 0; Column <= 9; Column++)
                 {
-                    if (!cheatOn1 && Board1[Row, Column] == 'S')
+                    if (!cheatOn1 && Board1[Column, Row] == 'S')
                     {
                         //Console.Write("  |");
                         WriteCell(' ');
                     }
                     else
                     {
-                        WriteCell(Board1[Row, Column]);
+                        WriteCell(Board1[Column, Row]);
                         //Console.Write(" " + Board1[Column, Row] + " |");
                     }
                     Console.Write("");
@@ -103,14 +102,14 @@ namespace CourseWork
                 Console.Write((Row).ToString() + " |");
                 for (Column = 0; Column <= 9; Column++)
                 {
-                    if (!cheatOn2 && Board2[Row, Column] == 'S')
+                    if (!cheatOn2 && Board2[Column, Row] == 'S')
                     {
                         //Console.Write("  |");
                         WriteCell(' ');
                     }
                     else
                     {
-                        WriteCell(Board2[Row, Column]);
+                        WriteCell(Board2[Column, Row]);
                         //Console.Write(" " + Board2[Column, Row] + " |");
                     }
                     

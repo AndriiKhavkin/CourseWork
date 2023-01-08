@@ -80,16 +80,16 @@ namespace CourseWork
                 {'S','S','S','S','S',' ','S',' ',' ','S'}
             }
         };
-        private static int GetRandom(int range)
-        {
-            Random rnd = new Random(DateTime.Now.Millisecond);
-            int value = rnd.Next(range);
-            return value;
-        }
+        // private static int GetRandom(int range)
+        // {
+        //     Random rnd = new Random(DateTime.Now.Millisecond);
+        //     int value = rnd.Next(range);
+        //     return value;
+        // }
 
         public static char[,] GetPattern()
         {
-            int patternNumber = GetRandom(5) + 1;
+            int patternNumber = Utils.GetRandom(5) + 1;
             return _patterns[patternNumber];
         }
                
