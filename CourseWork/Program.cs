@@ -17,7 +17,7 @@ namespace CourseWork
             {
                 Console.WriteLine("What is your name player 1?");
                 string name1 = System.Console.ReadLine();
-                Console.WriteLine("What is your name player 2?");
+                Console.WriteLine("What is bot name?");
                 string name2 = System.Console.ReadLine();
                 
                 

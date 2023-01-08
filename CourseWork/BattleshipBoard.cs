@@ -78,7 +78,7 @@ namespace CourseWork
         {
             int Row;
             int Column;
-            Console.WriteLine("\t\tPlayer 1: " + p1.GetUserName() + "\t\t\t\t\tPlayer 2: " + p2.GetUserName());
+            Console.WriteLine("\t\tPlayer 1: " + p1.GetUserName() + "\t\t\t\t\tBot: " + p2.GetUserName());
             Console.WriteLine("  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |\t\t  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |");
             Console.WriteLine("--+----------------------------------------\t\t--+----------------------------------------");
             for (Row = 0; Row <= 9; Row++)

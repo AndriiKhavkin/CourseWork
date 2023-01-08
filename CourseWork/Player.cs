@@ -111,7 +111,8 @@ namespace CourseWork
         
         public void GetGridBoard()
         {
-            _grid = Patterns.GetPattern();
+            _grid = Patterns.GetPattern().Clone() as char[,];
+            
         }
         // public void CheckShip(char[,] Board, int x, int y)
         // {
