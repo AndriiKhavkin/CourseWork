@@ -29,7 +29,6 @@ namespace CourseWork
 
                     Console.Write("Player chose No!\n");
                     confirmed = true;
-                    break;
                 }
                 else
                 {

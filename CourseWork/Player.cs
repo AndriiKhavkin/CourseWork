@@ -1,24 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace CourseWork
 {
     public class Player
     {
-        public Player(string userName, int rating = 0, int gamesCount = 0)
+        public Player(string userName, int gamesCount = 0)
         {
             UserName = userName;
-            CurrentRating = rating < 1 ? 1 : rating;
             GamesCount = gamesCount;
         }
         
         private string UserName;
-        private int CurrentRating;
         private int GamesCount;
         
-        public int GetRating() { return CurrentRating;}
         public int GetGamesCount() { return GamesCount;}
         public void SetGamesCount(int Value) { GamesCount = Value < 0 ? 0 : Value;}
         public string GetUserName() { return UserName;}
@@ -34,10 +28,6 @@ namespace CourseWork
         
         public int GetMissCount() { return MissCount; }
 
-        public void CheckShip()
-        {
-            
-        }
         public virtual void AskCoordinates()
         {
             Console.WriteLine("It is player " +  GetUserName() + " turn");
@@ -70,19 +60,19 @@ namespace CourseWork
                 {
                     _grid[_x, _y] = 'H';
                     Console.Clear();
-                    Console.WriteLine("Hit!\r\n");
+                    Console.WriteLine("\nHit!\r\n");
                     //CheckShip( _grid,_x, _y);
                     HitCount += 1;
                 }else if(_grid[_x, _y].Equals('H'))
                 {
                     _grid[_x, _y] = 'H';
                     Console.Clear();
-                    Console.WriteLine("You have already shoot down this ship!\r\n");
+                    Console.WriteLine("\nYou have already shoot down this ship!\r\n");
                 }else
                 {
                     _grid[_x, _y] = 'M';
                     Console.Clear();
-                    Console.WriteLine("Miss!\r\n");
+                    Console.WriteLine("\nMiss!\r\n");
                     MissCount += 1;
                 }
             }
@@ -93,14 +83,14 @@ namespace CourseWork
             }
         }
 
-        public void Achievment()
+        public void Achievement()
         {
             if (GetMissCount()==0)
             {
-                Console.Write("Congratulations, you managed to win without a single miss!");
+                Console.Write("\n\nCongratulations, " + GetUserName()+  " you managed to win without a single miss!");
                 char slash = '\\' ;
                 Console.Write("\n         . \n         " + slash +  "*" + slash + "\n         " + slash +  "  " + slash +  "      _-*|\n        _" +  slash + "    " + slash +  "_-*   |\n _____-*__________-*_______\n");
-                Console.Write("(Drowned cruiser moscow)");
+                Console.Write("(Drowned cruiser moscow)\n\n");
             }
         }
         

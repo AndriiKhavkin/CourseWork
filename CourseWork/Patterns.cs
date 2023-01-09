@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CourseWork
+﻿namespace CourseWork
 {
     public class Patterns
     {
@@ -80,12 +77,6 @@ namespace CourseWork
                 {'S','S','S','S','S',' ','S',' ',' ','S'}
             }
         };
-        // private static int GetRandom(int range)
-        // {
-        //     Random rnd = new Random(DateTime.Now.Millisecond);
-        //     int value = rnd.Next(range);
-        //     return value;
-        // }
 
         public static char[,] GetPattern()
         {

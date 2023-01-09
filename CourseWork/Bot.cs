@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 
 namespace CourseWork
 {
     public class Bot : Player
     {
-        public Bot(string userName, int rating = 0, int gamesCount = 0) : base(userName, rating, gamesCount) { }
+        public Bot(string userName, int gamesCount = 0) : base(userName, gamesCount) { }
         
         
         char[,] _grid = new char[10, 10];

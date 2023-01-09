@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
+
 using System.Threading;
 
 namespace CourseWork
@@ -23,8 +22,8 @@ namespace CourseWork
                 
                 BattleshipBoard b1 = new BattleshipBoard();
                 BattleshipBoard b2 = new BattleshipBoard();
-                Player p1 = new Player(name1, 0, 0 );
-                Bot p2 = new Bot(name2, 0, 0 );
+                Player p1 = new Player(name1,  0 );
+                Bot p2 = new Bot(name2, 0 );
                 
                 p1.SetHitCount(0);
                 p2.SetHitCount(0);
@@ -57,8 +56,8 @@ namespace CourseWork
                     p2.AskCoordinates();
                 }
                 
-                p1.Achievment();
-                p2.Achievment();
+                p1.Achievement();
+                p2.Achievement();
                 
                 if (p2.GetHitCount() == 21)
                 {
