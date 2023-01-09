@@ -82,9 +82,9 @@ namespace CourseWork
             return _grid;
         }
         
-        public void GetGridBoard()
-        {
-            _grid = Patterns.GetPattern();
-        }
+         public void GetGridBoard()
+         {
+                _grid = Patterns.GetPattern().Clone() as char[,];
+         }
     }
 }
